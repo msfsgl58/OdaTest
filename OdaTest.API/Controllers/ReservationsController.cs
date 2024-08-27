@@ -17,13 +17,6 @@ namespace OdaTest.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reservation>>> GetReservations()
         {
-            //var reservationMember = _context.Members
-            //    .Include(r => r)
-            //    .ToList();
-
-            //var reservationRoom = _context.Reservations
-            //    .Include(r => r.Rooms)
-            //    .ToList();
             return await _context.Reservations.ToListAsync();
         }
 
